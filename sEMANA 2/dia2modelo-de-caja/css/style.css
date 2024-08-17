@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* font-family: "Open Sans", sans-serif;
+font-family: "Raleway", system-ui; */
+
+/* Estilos generales */
+
+* { /* Selector universal (pone estilo a todo de una sola) */
+    box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  font-size: 14px;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+
+  background-color: hsl(217, 28%, 15%);
+  color: hsl(0, 0%, 100%);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+    /*TODO: RWD PARA IMAGENES */
+    max-width: 100%;
+    height: auto;
+}
+
+/* UTILS */
+
+.hidden {
+    display: none;
+}
+
+.wrapper {
+    /* width: 1000px; */
+    /*ADAPTAR EL ANCHO DE LA PAGINA A DISPOSITIVOS PEQUEÑOS O GRANDES */
+    width: min(100% - 3rem, 1440px);
+}
+
+/* HEADER SECTION */
+
+.header {
+    /* border: 1px solid red; */ 
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 0 auto;
+    margin-top: 3rem;
+}
+
+.header__nav { /* separa (features, team, sig in ) */
+    display: flex;
+    gap: 3rem;
+}
+
+/* HERO SECTION */
+
+.hero {
+    /* border: 1px solid red; */
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center; /*tamaño original de la imagen */
+    gap: 2rem;
+
+    padding-top: 3rem;
+    padding-bottom: 12rem;
+
+    background-image: url(../images/bg-curvy-desktop.svg); /*pone imagen de fondo de cerritos */
+    background-repeat: no-repeat; /*no repite imagen */
+    background-position: bottom;
+    background-size: contain;
+
+}
+
+@media (max-width: 768px) {
+    .hero {
+        background-image: url(../images/bg-curvy-mobile.svg);
+    }
+}
+
+.hero__tittle {
+    /* border: 1px solid blue; */
+
+    /* width: 720px; */
+    width: min(100% - 3rem, 720px);
+
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.hero__text {
+    /* border: 1px solid yellow; */
+
+    width: min(100% - 3rem, 720px);
+
+    font-family: "Raleway", system-ui;
+    font-weight: 400;
+    font-size: 1.2rem;
+    text-align: center;
+
+}
+
+.hero__button {
+    font-family: "Raleway", system-ui;
+    font-weight: 700;
+
+    border: none;
+    border-radius: 7rem;
+    padding: 1rem 1.5rem;
+    min-width: 220px; /* tamaño de boton */
+    color: hsl(0, 0%, 100%);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%); /* degradado */
+}
+
+.hero__button:hover { /*cuando ponga puntero encima de boton pasará algo */
+    background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+
+    cursor: pointer; /* manito para que avise que se puede hacer click */
+
+}
+
+
